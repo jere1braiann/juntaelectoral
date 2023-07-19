@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <title>Elije Presidente</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+   body {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('11.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: rgb(255, 245, 245);
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 159000px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.408);
+    }
+
+    .card {
+      background-color: #33333386;
+      display: inline-block;
+      color: #fff;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      width: calc(33.333% - 30px);
+      display: inline-block;
+    }
+
+    .card.selected {
+      border-color: green;
+      background-color: green;
+    }
+    .card-img-top {
+      max-height: 250px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Elije Presidente</h1>
+    <div id="presidentSelection">
+      <div class="card" onclick="selectOption('Lista PEV', 'presidentSelection')">
+        <img src="2.png" class="card-img-top" alt="Logo Lista A">
+        <div class="card-body">
+
+            <h5 class="card-title">Lista P.E.V</h5>
+            <p class="card-text">Candidatos:</p>
+            <ul class="card-text">
+              <h5>Bruno Buasso - Presidente </h5>
+              <li>Bruno Distefano - Vicepresidente </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" onclick="selectOption('Lista MIVP', 'presidentSelection')">
+        <img src="4.png" class="card-img-top" alt="Logo Lista B">
+        <div class="card-body">
+          <h5 class="card-title">Lista MIVP</h5>
+          <p class="card-text">Candidatos:</p>
+          <ul class="card-text">
+            <h5>Aldana Masnovo - Presidente </h5>
+            <li>Guadalupe Villanueva - Vicepresidente </li>
+        </ul>
+        </div>
+      </div>
+      <div class="card" onclick="selectOption('Voto en blanco', 'presidentSelection')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Blanco.svg/1200px-Blanco.svg.png" class="card-img-top" alt="Logo Voto en blanco">
+        <div class="card-body">
+          <h5 class="card-title">Voto en blanco</h5>
+          <p class="card-text">No se selecciona ningún candidato.</p>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-dark" onclick="goBack()">Atrás</button>
+    <button type="button" class="btn btn-dark" id="nextBtn" onclick="nextPage('secretary')" disabled>Siguiente</button>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voto Emitido</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('12.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: rgb(8, 0, 100);
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            color: #000;
+        }
+
+        .loading-animation {
+            font-size: 36px;
+            color: #00ff00;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4 loading-animation">Estamos procesando tu voto...</h1>
+        <i class="loading-animation fas fa-spinner fa-spin"></i>
+    </div>
+
+    <script src="https://kit.fontawesome.com/1dc82ed3db.js" crossorigin="anonymous"></script>    <script>
+        // Función para mostrar el mensaje de éxito y redireccionar después
+        function showSuccessMessage() {
+            var container = document.querySelector('.container');
+            container.innerHTML = `
+                <h1 class="display-4"><i class="fas fa-check-circle" style="color: #00ff00;"></i> Su voto se emitió con éxito</h1>
+                <p class="lead">Retírese del cuarto oscuro</p>
+            `;
+
+            // Redireccionar al usuario después de 4 segundos
+            setTimeout(function() {
+                window.location.href = "/ELECCIONES2023/miweb-master/miweb-master/ACCESO/ESTUDIANTES/index.html";
+            }, 4000); // 4000 milisegundos = 4 segundos
+        }
+
+        // Llamar a la función de mostrar el mensaje de éxito después de 3 segundos
+        setTimeout(showSuccessMessage, 3000); // 3000 milisegundos = 3 segundos
+    </script>
+</body>
+</html>

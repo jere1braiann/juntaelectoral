@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RESULTADOS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 12;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+        body {
+            background: url('5.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding:50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    
+        }
+
+        h1 {
+            font-family: "Gotham", sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #111563;
+        }
+
+
+        .btn-container {
+            width: 100px;
+            height: 40px;
+            background-position: center;
+            color: antiquewhite;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <button class="btn btn-primary btn-votar" onclick="siguientePagina()">Ver Participacion</button>
+        <button class="btn btn-primary btn-votar" onclick="siguientePagina2()">Ver Escrutinio</button>
+    </div>
+    <script>
+        function siguientePagina() {
+          window.location.href = '/ELECCIONES2023/miweb-master/miweb-master/RESULTADOS/Participacion/Participacion_total.php';
+        }
+        function siguientePagina2() {
+          window.location.href = '/ELECCIONES2023/miweb-master/miweb-master/RESULTADOS/Ganador/Generales/grafico_porcentual.php';
+        }
+    </script>
+</body>
+</html>

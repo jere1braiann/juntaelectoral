@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elección de Lista Completa</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Elige una Lista Completa</h1>
+
+    <div class="card-container">
+      <div class="custom-card" onclick="seleccionarLista('453')">
+        <img src="2.png" alt="Logo Lista 453" class="card-img-top">
+        <h2>Lista P.E.V - Completa</h2>
+        <h4>Bruno Buasso</h4>
+        <h4>Presidente</h4>
+        <h4>-</h4>
+        <h4>Bradley Bazan</h4>
+        <h4>Secretario General</h4>
+      </div>
+
+      <div class="custom-card" onclick="seleccionarLista('101')">
+        <img src="4.png" alt="Logo Lista 878" class="card-img-top">
+        <h2>Lista MIVP - Completa</h2>
+        <h4>Aldana Masnovo</h4>
+        <h4>Presidente</h4>
+        <h4>-</h4>
+        <h4>Ludmila Carabajal</h4>
+        <h4>Secretaria General</h4>
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn btn-enviar" onclick="enviarSeleccion()">Enviar</button>
+      <button class="btn btn-danger" onclick="window.location.href = 'index.html'">Atras</button>
+    </div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="prompt.js"></script>
+</body>
+</html>
